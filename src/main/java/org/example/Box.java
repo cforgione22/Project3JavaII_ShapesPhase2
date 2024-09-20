@@ -14,13 +14,18 @@ public class Box extends Shape {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void draw(Graphics g) {
         Graphics2D g2 = (Graphics2D) g; //casting for enhanced 2D graphics capability
         int height = Math.abs(getP1().y - getP2().y);
         int width = Math.abs(getP1().x - getP2().x);
         g2.setStroke(new BasicStroke(getLineWidth()));
         g2.setColor(getColor());
         g2.drawRect(getP1().x, getP1().y, width, height);
+    }
+
+    @Override
+    public void paint(Graphics g) {
+
     }
 
 }
