@@ -16,11 +16,16 @@ public class Box extends Shape {
     @Override
     public void draw(Graphics g) {
         Graphics2D g2 = (Graphics2D) g; //casting for enhanced 2D graphics capability
-        int height = Math.abs(getP1().y - getP2().y);
-        int width = Math.abs(getP1().x - getP2().x);
         g2.setStroke(new BasicStroke(getLineWidth()));
         g2.setColor(getColor());
-        g2.drawRect(getP1().x, getP1().y, width, height);
+
+        Point point3 = new Point(getP1().x, getP2().y);
+        Point point4 = new Point(getP2().x, getP1().y);
+
+        int[] xs = { getP1().x, point3.x, getP2().x, point4.x };
+        int[] ys = { getP1().y, point3.y, getP2().y, point4.y };
+
+        g2.drawPolygon(xs, ys, 4);
     }
 
     @Override

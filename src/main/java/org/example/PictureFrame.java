@@ -20,7 +20,7 @@ public class PictureFrame extends JFrame {
     private Point upperLeft = new Point(300, 10);   //default anchor point
 
     private CanvasComponent scene;      //the widget where the drawings reside
-    private JPanel panel;               //the subWindow (subframe) where the scene lives
+    private JPanel panel;               //the subWindow (sub frame) where the scene lives
 
     /**
      * Using this inner class to bundle the mouse events (listening, handling)
@@ -30,7 +30,6 @@ public class PictureFrame extends JFrame {
         public void mousePressed(MouseEvent e) {
             scene.createShape(e.getPoint());
         }
-
 
         @Override
         public void mouseDragged(MouseEvent e) {

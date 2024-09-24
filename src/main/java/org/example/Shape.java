@@ -11,7 +11,6 @@ public abstract class Shape {
     private Point p2;
     private Color color;
     private int lineWidth = 2;
-
     public Shape( )
     {
         p1 = new Point(0,0);
@@ -74,6 +73,8 @@ public abstract class Shape {
     public abstract void paint(Graphics g);
 
     public abstract void draw(Graphics g);
+
+
 }
 
 
